@@ -1,21 +1,20 @@
 var $ = document.getElementById.bind(document);
 
 /**
- * input: 5
- * output: 2
+ * BT1: quản lý tuyển sinh
+ * - Đầu vào: người dùng nhập diemChuan, diemMon_1,
+ *  diemMon_2, diemMon_3, khuVuc, doiTuong, tongDiem, ketQuaDauRot
  * 
- * Khu vực: A = 2, B = 1, C = 0.5, X = 0;
- * Đối tượng: 1 = 2.5, 2 = 1.5, 3 = 1, 0 = 0;
+ * - Xử lý: 
+ * B1: tạo hàm tính tổng điểm 3 môn thi
+ * B2: tạo hàm tính điểm ưu tiên 
+ *   Khu vực: A = 2, B = 1, C = 0.5, X = 0;
+ *   Đối tượng: 1 = 2.5, 2 = 1.5, 3 = 1, 0 = 0;
+ * B3: tạo hàm kiểm tra đậu rớt
+ * B4: tính tổng điểm
+ * B5: kiểm tra đậu rớt
  * 
- * Đậu nếu tongDiem >= diemChuan && (diemMon_1 > 0 && diemMon_2 > 0 && diemMon_3 > 0)
- * ngược lại thì Rớt
- * 
- * tongDiem = tongDiem3mon + điểm ưu tiên(khu vực + đối tượng)
- *  
- * 2 hàm : 1 hàm tính đậu(true) rớt(flase)
- * 1 hàm tính tổng điểm;
- * 
- * để biết đậu rớt thì phải tính tổng điểm trước
+ * - Đầu ra: in kết quả đậu rớt và tổng điểm đạt được
  */
 
 
@@ -48,7 +47,7 @@ function tongDiem3Mon(x, y, z){
     return x + y + z;
 };
 
-// Hàm xét đậu rớt
+// Hàm kiểm tra đậu rớt
 function kiemTraDauRot(td, dc, dm_1, dm_2, dm_3){
     if(td >= dc && (dm_1 > 0 && dm_2 > 0 && dm_3 > 0)){
         return true;
@@ -73,7 +72,7 @@ $("btnKetQua").onclick = function(){
         ketQuaDauRot = "Đậu";
     }else{
         ketQuaDauRot = "Rớt";
-    }
+    };
 
 
     $("ketQuaDauRot").innerHTML = ketQuaDauRot;
