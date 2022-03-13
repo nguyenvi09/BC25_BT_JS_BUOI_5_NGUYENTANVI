@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BT Buổi 5</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header text-center">QUẢN LÝ TUYỂN SINH</div>
+            <div class="card-body">
+              <div class="form-group text-center mr-5">
+                <label class="col-6 text-right"
+                  >Điểm chuẩn của hội đồng:
+                </label>
+                <input
+                  placeholder="Nhập điểm chuẩn"
+                  maxlength="2"
+                  type="text"
+                  id="diemChuan"
+                />
+
+                <label class="col-6 text-right">Điểm môn thứ nhất: </label>
+                <input
+                  placeholder="Nhập điểm môn thứ nhất"
+                  maxlength="2"
+                  type="text"
+                  id="diemMon_1"
+                />
+                <label class="col-6 text-right">Điểm môn thứ hai: </label>
+                <input
+                  placeholder="Nhập điểm môn thứ hai"
+                  maxlength="2"
+                  type="text"
+                  id="diemMon_2"
+                />
+                <label class="col-6 text-right">Điểm môn thứ ba: </label>
+                <input
+                  placeholder="Nhập điểm môn thứ ba"
+                  maxlength="2"
+                  type="text"
+                  id="diemMon_3"
+                />
+
+                <label class="col-6 text-right">Khu vực: </label>
+                <input
+                  placeholder="Nhập khu vực"
+                  maxlength="1"
+                  type="text"
+                  id="khuVuc"
+                />
+
+                <label class="col-6 text-right">Đối tượng dự thi: </label>
+                <input
+                  placeholder="Nhập đối tượng"
+                  maxlength="1"
+                  type="text"
+                  id="doiTuong"
+                />
+
+                <button id="btnKetQua" class="btn btn-success mt-2">
+                  Kết quả
+                </button>
+              </div>
+            </div>
+            <div id="ketQuaDauRot" class="card-footer text-muted"></div>
+            <div id="ketQuaTongDiem" class="card-footer text-muted"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Main js -->
+    <script src="./main.js"></script>
+  </body>
+</html>
