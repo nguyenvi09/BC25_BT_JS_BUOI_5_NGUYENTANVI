@@ -79,3 +79,56 @@ $("btnKetQua").onclick = function(){
     $("ketQuaTongDiem").innerHTML = "Tổng số điểm đạt được là: " + tongDiem;
 
 };
+
+/**Tính tiền điện
+ * - Đầu vào: nhập số kw tiêu thụ
+ * 
+ * - Xử lý:
+ * B1: tạo 5 hàm tinh50KwDau(sokW), tinh50KwKe(sokW),
+ * tinh100KwKe(sokW), tinh150KwKe(sokW), tinhKwConLai(sokW)
+ * 0 -> 50 đầu -> 50 kế của 50 đầu --> 100 kế của 100 đầu ---> 150 kế tiếp của 200 trước đó ----> còn lại sokW > 350
+ * B2: dùng if kiểm tra các điều kiện 
+ * 
+ * - Đầu ra: in tiền phải trả ra màn hình
+ *  */ 
+var currentFormat = new Intl.NumberFormat("vn-VN");
+
+$("btnTinhTienDien").onclick = function(){
+    var sokW = $("sokW").value *1;
+    var tongTienDien;
+
+    if(sokW <= 50){
+        tongTienDien = tinh50KwDau(sokW);
+    }else if(50 < sokW && sokW <= 100){
+        tongTienDien = tinh50KwKe(sokW);
+    }else if(100 < sokW && sokW <= 200){
+        tongTienDien = tinh100KwKe(sokW);
+    }else if(200 < sokW && sokW <= 350){
+        tongTienDien = tinh150KwKe(sokW);
+    }else{
+        tongTienDien = tinhKwConLai(sokW);
+    };
+
+    $("tongTienDien").innerHTML = "Tổng tiền điện phải trả là: " + currentFormat.format(tongTienDien) + " đ/kW";
+};
+
+
+function tinh50KwDau(sokW){
+    return sokW * 500;
+};
+
+function tinh50KwKe(sokW){
+    return (50*500 + (sokW - 50)*650);
+};
+
+function tinh100KwKe(sokW){
+    return (50*500 + 50*650 + (sokW - 100)*850);
+};
+
+function tinh150KwKe(sokW){
+    return (50*500 + 50*650 + 100*850 + (sokW - 200)*1100);
+};
+
+function tinhKwConLai(sokW){
+    return (50*500 + 50*650 + 100*850 +  150*1100 + (sokW - 350)*1300); 
+};
